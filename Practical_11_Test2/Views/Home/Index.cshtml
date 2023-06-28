@@ -1,0 +1,37 @@
+﻿@model List<Practical_11_Test2.Models.User>
+
+@{
+	ViewBag.Title = "Home Page";
+}
+
+
+<h2> Users </h2>
+
+@Html.ActionLink("Add User", "Create",string .Empty, htmlAttributes: new { @class = "btn btn-success btn-sm" })
+
+
+<table class="table table-light table-striped text-center mt-3 ">
+	<thead class="p-2 table-dark">
+		<tr >
+			<td >
+				Name
+			</td>
+			<td >
+				Date of birth
+			</td>
+			<td >
+				Address
+			</td>
+			<td >
+				Actions
+			</td>
+		</tr>
+	</thead>
+	<tbody style="margin-top:5px">
+		@foreach (var item in Model)
+		{
+			@Html.Partial("_ShowData",item)
+		}
+	</tbody>
+</table>
+
