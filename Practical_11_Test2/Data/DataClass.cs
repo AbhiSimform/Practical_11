@@ -16,7 +16,7 @@ namespace Practical_11_Test2.Data
 				{
 					Id = i,
 					Name = $"Test{i}",
-					DOB = DateTime.Today.ToString("yyyy-MM-dd"),//Now.Date.ToString(),
+					DOB = DateTime.Today.ToString("yyyy-MM-dd"),
 					Address = $"hello this is address! {i * 11232}"
 				});
 			}

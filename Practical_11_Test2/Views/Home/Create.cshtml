@@ -1,35 +1,35 @@
 ﻿@model Practical_11_Test2.Models.User
 
 @{
-    ViewBag.Title = "Create";
+	ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>User</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        
-        @Html.Partial("_CreatePartialView",Model)
+	@Html.AntiForgeryToken()
 
-        <div class="form-group mt-2">
+	<div class="form-horizontal">
+		<h4>User</h4>
+		<hr />
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+		@Html.Partial("_CreatePartialView", Model)
+
+		<div class="form-group mt-2">
 			<div class="col-md-offset-2 col-md-10">
 				<input type="submit" value="Create" class="btn btn-success " />
 				@Html.ActionLink("Back to List", "Index", string.Empty, htmlAttributes: new { @class = "btn btn-success " })
 			</div>
-        </div>
-    </div>
+		</div>
+	</div>
 }
 
 <div>
 </div>
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/jqueryval")
 }
